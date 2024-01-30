@@ -37,14 +37,14 @@ As this feature is released as a beta version, users are requested to provide th
                 "s3:Get*",
                 "s3:List*"
             ],
-      "Resource": [ "arn:aws:s3:::wx-firebolt-query-history/*/account_id=<firebolt-account-id>/*"
+      "Resource": [ "arn:aws:s3:::<s3-bucket>/*/account_id=<firebolt-account-id>/*"
             ]
         }
     ]
 }
 ```
 
-> Note: Make sure you replace `<firebolt-account-id>` with your own firebolt account id.
+> Note: Make sure you replace `<firebolt-account-id>` and `<s3-bucket>` with your own firebolt account id and s3 bucket.
 
 Upon receipt of this information, we will enable this capability on our end for the specified account.
 
