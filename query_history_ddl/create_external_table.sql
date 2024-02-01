@@ -1,0 +1,37 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS "ex_persistent_query_history" (
+  engine_name	TEXT,
+  engine_id	TEXT,
+  packdb_version	TEXT,
+  user_id	TEXT,
+  account_id	TEXT,
+  organization_name	TEXT,
+  start_time	TIMESTAMP,
+  end_time	TIMESTAMP,
+  duration_usec	BIGINT,
+  query_optimization_us	BIGINT,
+  status	TEXT,
+  query_id	TEXT,
+  query_text	TEXT,
+  query_text_normalized	TEXT,
+  query_text_normalized_hash	TEXT,
+  error_message	TEXT,
+  scanned_rows	BIGINT,
+  scanned_bytes	BIGINT,
+  scanned_bytes_cache	BIGINT,
+  scanned_bytes_storage	BIGINT,
+  inserted_rows	BIGINT,
+  inserted_bytes	BIGINT,
+  inserted_bytes_storage	BIGINT,
+  spilled_bytes_compressed	BIGINT,
+  spilled_bytes_uncompressed	BIGINT,
+  total_ram_consumed	BIGINT,
+  cpu_usage_us	BIGINT,
+  cpu_delay_us	BIGINT,
+  returned_rows	BIGINT,
+  returned_bytes	BIGINT,
+  time_in_queue_ms	BIGINT,
+  rows_total	BIGINT
+)        
+  "CREDENTIALS" = ("AWS_ROLE_ARN" = '<arn_name>') 
+  "OBJECT_PATTERN" = '*.parquet' 
+  "TYPE" = ("PARQUET") "URL" = '<s3_URL>';
