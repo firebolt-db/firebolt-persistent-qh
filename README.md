@@ -18,7 +18,7 @@ As this feature is released as a beta version, users are requested to provide th
 * **Account Information:** Firebolt Account ID.
 * **Configuration:** Specify the S3 bucket and folder for storing query history parquet files from Firebolt Account ID.
 * **Permissions:** Grant the provided Firebolt AWS IAM role required write, list, and read permissions to the designated S3 folder
-* **Pattern:** `arn:aws:iam::088947231907:role/FireboltData_<firebolt-account-id>`
+* **Pattern:** `arn:aws:iam::<provided Firebolt AWS account id>:role/FireboltData_<firebolt-account-id>`
     Ensure that the S3 bucket policy is configured accurately, following the provided example below for reference. 
 ```{
  "Version": "2012-10-17",
@@ -27,7 +27,7 @@ As this feature is released as a beta version, users are requested to provide th
       "Effect": "Allow",
       "Principal": {
         "AWS":  [
-                "arn:aws:iam::088947231907:role/FireboltData_<firebolt-account-id>"
+                "arn:aws:iam::<provided Firebolt AWS account id>:role/FireboltData_<firebolt-account-id>"
                 ]
             },
       "Action": [
