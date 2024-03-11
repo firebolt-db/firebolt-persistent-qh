@@ -13,11 +13,11 @@ Currently, query history in Firebolt is lost on engine restart or after two week
 We're releasing an alpha release of our persistence query history capability. Dive in, explore the extended data retention, and leverage the advanced query analysis tools. Your valuable feedback is pivotal in refining this feature for its official launch! Join us on this alpha journey to shape the future of Firebolt.
 
 ## Setup
-As this feature is released as a beta version, users are requested to provide the following details for activation:
+As this feature is released as a beta version, users are requested to perform the following steps for activation:
 
-* **Account Information:** Firebolt Account ID.
+* **Account Information:** Provide Firebolt Account ID.
 * **Configuration:** Specify the S3 bucket and folder for storing query history parquet files from Firebolt Account ID.
-* **Permissions:** Grant the provided Firebolt AWS IAM role required write, list, and read permissions to the designated S3 folder
+* **Permissions:** Ask for a Firebolt owned AWS IAM role and AWS account. Grant the provided Firebolt AWS IAM role required write, list, and read permissions to the designated S3 folder
 * **Pattern:** `arn:aws:iam::<Firebolt provided AWS id>:role/FireboltData_<firebolt-account-id>`
     Ensure that the S3 bucket policy is configured accurately, following the provided example below for reference. 
 ```{
@@ -44,7 +44,7 @@ As this feature is released as a beta version, users are requested to provide th
 }
 ```
 
-> Note: Make sure you replace `<firebolt-account-id>` and `<s3-bucket>` with your own firebolt account id and s3 bucket. Also pleas ask firebolt to provide a '<**firebolt provide AWZ id**>'
+> Note: Make sure you replace `<firebolt-account-id>` and `<s3-bucket>` with your own firebolt account id and s3 bucket. Also please ask Firebolt to provide a '<**firebolt provide AWS id**>'
 
 Upon receipt of this information, we will enable this capability on our end for the specified account.
 
