@@ -28,7 +28,7 @@ select
         end err_count
         ,total_ram_consumed/(1024*1024*1024) as total_ram_gb
         ,scanned_bytes/(1024*1024*1024) as scanned_gb
-    from customer_query_history_craftable_us_west_2 qh 
+    from persistent_query_history qh
     where lower(query_text) not like '%query_history%'
     and lower(query_text) not like '%running_queries%'
     and lower(query_text) not like '%show_indexes%'
