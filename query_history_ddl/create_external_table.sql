@@ -5,7 +5,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS "ex_persistent_query_history" (
   user_name TEXT,
   login_name TEXT,
   service_account_name TEXT,
-  submitted_time TIMESTAMP,
+  submitted_time TIMESTAMPTZ,
   start_time TIMESTAMP,
   end_time TIMESTAMP,
   duration_us BIGINT,
@@ -25,8 +25,10 @@ CREATE EXTERNAL TABLE IF NOT EXISTS "ex_persistent_query_history" (
   returned_rows BIGINT,
   returned_bytes BIGINT,
   time_in_queue_us BIGINT,
-  retries BIGINT
+  retries BIGINT,
+  proxy_time_us BIGINT
 )        
   "CREDENTIALS" = ("AWS_ROLE_ARN" = '<arn_name>') 
   "OBJECT_PATTERN" = '*.parquet' 
-  "TYPE" = ("PARQUET") "URL" = '<s3_URL>';
+  "TYPE" = ("PARQUET")
+  "URL" = '<s3_URL>';

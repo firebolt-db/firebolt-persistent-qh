@@ -65,4 +65,4 @@ This repository contains a set of example queries that you can use to analyze yo
 | [query_concurrency.sql](/example_queries/query_concurrency.sql) | Use this query to understand the approximate load on your Firebolt engine at different time periods. Output columns include the average number of concurrent queries per minute per hour, the average RAM consumed per query per minute per hour, and the average query duration per minute per hour. |
 | [query_drilldown.sql](/example_queries/query_drilldown.sql) | Use this query to understand the duration and resource consumption of individual query patterns at different time periods. This allows you to identify queries that could benefit from performance optimization. |
 
-Refer to the [Firebolt documentation](https://docs.firebolt.io/godocs/sql_reference/information-schema/query-history-view.html) for a detailed explanation of the columns available in `information_schema.query_history`. 
+Refer to the [Firebolt documentation](https://docs.firebolt.io/sql_reference/information-schema/engine-query-history.html) for a detailed explanation of the columns available in `information_schema.engine_query_history`. 
