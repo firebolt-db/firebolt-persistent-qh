@@ -54,7 +54,7 @@ We recommend connecting Firebolt to the query history parquet files stored in S3
 The following steps outline how to create your query history table in Firebolt, and include links to sample DDL code:
 1. [Create an external table](/query_history_ddl/create_external_table.sql)
 2. [Create a fact table](/query_history_ddl/create_fact_table.sql)
-3. [Insert data into fact table](/query_history_ddl/create_fact_table.sql)
+3. [Insert data into fact table](/query_history_ddl/ingestion_option.sql)
 4. [(Optional) Configure aggregating indexes on your fact table](/query_history_ddl/aggregating_indexes.sql)
 
 ## Example Queries
@@ -62,7 +62,6 @@ This repository contains a set of example queries that you can use to analyze yo
 
 | Query Name | Description |
 | ---------- | ----------- |
-| [query_concurrency.sql](/example_queries/query_concurrency.sql) | Use this query to understand the approximate load on your Firebolt engine at different time periods. Output columns include the average number of concurrent queries per minute per hour, the average RAM consumed per query per minute per hour, and the average query duration per minute per hour. |
-| [query_drilldown.sql](/example_queries/query_drilldown.sql) | Use this query to understand the duration and resource consumption of individual query patterns at different time periods. This allows you to identify queries that could benefit from performance optimization. |
+| [query_pattern_analysis.sql](/example_queries/query_pattern_analysis.sql) | Use this query to understand problematic query patterns through statistical analysis of performance, resource usage, and cost metrics.
 
 Refer to the [Firebolt documentation](https://docs.firebolt.io/sql_reference/information-schema/engine-query-history.html) for a detailed explanation of the columns available in `information_schema.engine_query_history`. 
