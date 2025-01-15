@@ -54,7 +54,7 @@ We recommend connecting Firebolt to the query history parquet files stored in S3
 The following steps outline how to create your query history table in Firebolt, and include links to sample DDL code:
 1. [Create an external table](/query_history_ddl/create_external_table.sql)
 2. [Create a fact table](/query_history_ddl/create_fact_table.sql)
-3. [Insert data into fact table](/query_history_ddl/ingestion_option.sql)
+3. [Insert data into fact table](/query_history_ddl/ingestion_options.sql)
 4. [(Optional) Configure aggregating indexes on your fact table](/query_history_ddl/aggregating_indexes.sql)
 
 ## Example Queries
